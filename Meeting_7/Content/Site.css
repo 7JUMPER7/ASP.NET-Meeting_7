@@ -1,0 +1,179 @@
+﻿*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+.bgImage {
+    z-index: -1;
+    width: 400px;
+    height: 400px;
+    right: 0;
+
+    filter: blur(2px);
+    box-shadow: 0 0 25px 20px rgba(0,0,0, 1) inset;
+
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: Bahnschrift;
+    background-color: Black;
+    font-weight: lighter;
+    color: white;
+    min-height: 100vh;
+}
+main {
+    min-height: inherit;
+    width: 100%;
+}
+
+header {
+    font-family: Arial Black;
+    
+    box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
+    background-color: #fdbe2b;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+header > #logo {
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px white;
+}
+
+.allQuests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 15%;
+}
+.questPlate {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    grid-template-rows: 1.5fr repeat(2, 1fr);
+    position: relative;
+    z-index: 1;
+}
+
+.questPlate .bgImage {
+    background-size: 400px;
+    background-position: right center;
+}
+
+.questHeader .title {
+    color: #c7292f;
+    font-weight: bold;
+    font-size: 50px;
+}
+.questHeader .description {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.params {
+    display: flex;
+    flex-direction: row;
+}
+.params .param {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.params .param span:first-child {
+    font-weight: bold;
+}
+.params .param .stars {
+    display: flex;
+    margin-top: 3px;
+}
+.params .param .stars > svg {
+    fill: none;
+    width: 16px;
+    height: 16px;
+    stroke: #fdbe2b;
+    stroke-width: 10px;
+    margin-right: 2px;
+}
+.params .param .stars > svg.selected {
+    fill: #fdbe2b;
+}
+
+.questPlate .buttons {
+    display: flex;
+}
+.questPlate .buttons a {
+    display: block;
+    border-radius: 7px;
+    border: 1px solid #fdbe2b;
+    background-color: black;
+    text-decoration: none;
+    color: #fdbe2b;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: .3s cubic-bezier(0, .4, 0, 1);
+}
+.questPlate .buttons a:hover {
+    color: black;
+    background-color: #fdbe2b;
+}
+
+
+
+.container {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+.container .header {
+    width: 90%;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+.container .header .bgImage {
+    width: 100%;
+    background-position: center;
+    background-size: 90%;
+}
+.container .header > div {
+    margin-top: 40px;
+}
+.container .header .title {
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.container .header .questHeader {
+    margin-top: 70px;
+}
+
+.container .descriptionBox {
+    background-color: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    height: 100%;
+    flex: 1 1 auto;
+}
+.container .descriptionBox h2 {
+    margin-bottom: 20px;
+}
