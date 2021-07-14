@@ -23,7 +23,7 @@
 
 <div class="container">
     <div class="header">
-        <div class="bgImage" style="background-image: url(@Model.ImageUrl)"></div>
+        <div class="bgImage" style="background-image: url(@VirtualPathUtility.ToAbsolute($"~/{Model.ImagePath}"))"></div>
         <div class="questHeader">
             <div class="title">@Model.Title</div>
             <div class="description">@Model.Description</div>

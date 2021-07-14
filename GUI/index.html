@@ -71,7 +71,7 @@
             </div>
         </div> -->
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="header">
                 <div class="bgImage"
                     style="background-image: url(https://www.mastermindroomescape.com/wp-content/uploads/2019/09/diamond-heist-escape-room-640x0-c-default.jpg);">
@@ -140,7 +140,47 @@
                     spending the rest of your life in jail.
                 </div>
             </div>
+        </div> -->
+
+        <form action="/Admin/Add" enctype="multipart/form-data" method="post">    <div class="field">
+            <label for="Title">Название</label>
+            <input id="Title" name="Title" type="text" value="">
         </div>
+        <div class="field">
+            <label for="Description">Краткое описание</label>
+            <input id="Description" name="Description" type="text" value="">
+        </div>
+        <div class="field">
+            <label for="ImagePath">Путь к картинке</label>
+            <div class="input__wrapper">
+                <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                <label for="input__file" class="input__file-button">
+                   <span class="input__file-button-text">Выберите файл</span>
+                </label>
+            </div>
+        </div>
+        <div class="field">
+            <label for="Difficulty">Сложность (1 - 5)</label>
+            <input id="Difficulty" name="Difficulty" type="text" value="0">
+        </div>
+        <div class="field">
+            <label for="Size">Размер группы</label>
+            <input id="Size" name="Size" type="text" value="">
+        </div>
+        <div class="field">
+            <label for="Time">Время (мин)</label>
+            <input id="Time" name="Time" type="text" value="0">
+        </div>
+        <div class="field">
+            <label for="LongDescriptionHeader">Заголовок описания</label>
+            <textarea id="LongDescriptionHeader" name="LongDescriptionHeader">text</textarea>
+        </div>
+        <div class="field">
+            <label for="LongDescription">Описание</label>
+            <textarea id="LongDescription" name="LongDescription"></textarea>
+        </div>
+        <input type="submit" value="Добавить квест комнату">
+    </form>
     </main>
 </body>
 

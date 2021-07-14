@@ -1,0 +1,48 @@
+﻿@using Meeting_7.Models
+@model Quest
+@{
+    ViewBag.Title = "Add";
+    Html.EnableClientValidation(false);
+}
+
+@using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="field">
+        @Html.LabelFor(t => t.Title)
+        @Html.TextBoxFor(t => t.Title)
+    </div>
+    <div class="field">
+        @Html.LabelFor(t => t.Description)
+        @Html.TextBoxFor(t => t.Description)
+    </div>
+    <div class="field">
+        <label for="ImagePath">Путь к картинке</label>
+        <div class="input__wrapper">
+            <input type="file" name="ImagePath" id="input__file" class="input input__file" multiple>
+            <label for="input__file" class="input__file-button">
+                <span class="input__file-button-text">Выберите файл</span>
+            </label>
+        </div>
+    </div>
+    <div class="field">
+        @Html.LabelFor(t => t.Difficulty)
+        @Html.TextBoxFor(t => t.Difficulty)
+    </div>
+    <div class="field">
+        @Html.LabelFor(t => t.Size)
+        @Html.TextBoxFor(t => t.Size)
+    </div>
+    <div class="field">
+        @Html.LabelFor(t => t.Time)
+        @Html.TextBoxFor(t => t.Time)
+    </div>
+    <div class="field">
+        @Html.LabelFor(t => t.LongDescriptionHeader)
+        @Html.TextAreaFor(t => t.LongDescriptionHeader)
+    </div>
+    <div class="field">
+        @Html.LabelFor(t => t.LongDescription)
+        @Html.TextAreaFor(t => t.LongDescription)
+    </div>
+    <input type="submit" value="Добавить квест комнату" />
+}

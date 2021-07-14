@@ -24,7 +24,7 @@
 @helper createQuestPlate(Quest quest)
 {
     <div class="questPlate">
-        <div class="bgImage" style="background-image: url(@quest.ImageUrl)"></div>
+        <div class="bgImage" style="background-image: url(@VirtualPathUtility.ToAbsolute($"~/{quest.ImagePath}"))"></div>
         <div class="questHeader">
             <div class="title">@quest.Title</div>
             <div class="description">@quest.Description</div>

@@ -12,7 +12,8 @@ namespace Meeting_7.Utils
     {
         public override void Load()
         {
-            Bind<IQuestList<Quest>>().To<QuestsList>().InSingletonScope();
+            Bind<IQuestList<Quest>>().To<QuestEFRepository>();
+            Bind<QuestsContext>().To<QuestsContext>();
         }
     }
 }

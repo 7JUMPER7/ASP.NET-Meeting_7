@@ -12,5 +12,6 @@ namespace Meeting_7.DAL
         void Create(T item);
         bool Delete(int id);
         T GetItem(int id);
+        T Update(T item);
     }
 }
