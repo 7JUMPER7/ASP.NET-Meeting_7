@@ -1,12 +1,13 @@
-﻿@using Meeting_7.Models
-@model Quest
+﻿@model Meeting_7.Models.Quest
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Edit";
     Html.EnableClientValidation(false);
 }
 
-@using (Html.BeginForm("Add", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm())
 {
+    @Html.AntiForgeryToken()
+
     <div class="field">
         @Html.LabelFor(t => t.Title)
         @Html.TextBoxFor(t => t.Title)
@@ -50,25 +51,4 @@
         @Html.TextAreaFor(t => t.LongDescription)
     </div>
     <input type="submit" value="Добавить квест комнату" />
-}
-@section scripts 
-{
-    <script>
-    let inputs = document.querySelectorAll('.input__file');
-    Array.prototype.forEach.call(inputs, function (input) {
-      let label = input.nextElementSibling,
-        labelVal = label.querySelector('.input__file-button-text').innerText;
-
-      input.addEventListener('change', function (e) {
-        let countFiles = '';
-        if (this.files && this.files.length >= 1)
-          countFiles = this.files.length;
-
-        if (countFiles)
-          label.querySelector('.input__file-button-text').innerText = 'Выбрано файлов: ' + countFiles;
-        else
-          label.querySelector('.input__file-button-text').innerText = labelVal;
-      });
-    });
-    </script>
 }

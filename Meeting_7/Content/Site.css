@@ -10,10 +10,8 @@
     width: 400px;
     height: 400px;
     right: 0;
-
     filter: blur(2px);
     box-shadow: 0 0 25px 20px rgba(0, 0, 0, 1) inset;
-
     position: absolute;
     background-repeat: no-repeat;
 }
@@ -33,26 +31,23 @@ main {
 
 header {
     font-family: Arial Black;
-
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
     background-color: #fdbe2b;
     height: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-header>#logo {
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
-    text-shadow: 1px 1px white;
-}
+    header > #logo {
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+        text-shadow: 1px 1px white;
+    }
 
 .allQuests {
     display: flex;
@@ -75,10 +70,10 @@ header>#logo {
     z-index: 1;
 }
 
-.questPlate .bgImage {
-    background-size: 400px;
-    background-position: right center;
-}
+    .questPlate .bgImage {
+        background-size: 400px;
+        background-position: right center;
+    }
 
 .questHeader .title {
     color: #c7292f;
@@ -96,54 +91,54 @@ header>#logo {
     flex-direction: row;
 }
 
-.params .param {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
+    .params .param {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
 
-.params .param span:first-child {
-    font-weight: bold;
-}
+        .params .param span:first-child {
+            font-weight: bold;
+        }
 
-.params .param .stars {
-    display: flex;
-    margin-top: 3px;
-}
+        .params .param .stars {
+            display: flex;
+            margin-top: 3px;
+        }
 
-.params .param .stars>svg {
-    fill: none;
-    width: 16px;
-    height: 16px;
-    stroke: #fdbe2b;
-    stroke-width: 10px;
-    margin-right: 2px;
-}
+            .params .param .stars > svg {
+                fill: none;
+                width: 16px;
+                height: 16px;
+                stroke: #fdbe2b;
+                stroke-width: 10px;
+                margin-right: 2px;
+            }
 
-.params .param .stars>svg.selected {
-    fill: #fdbe2b;
-}
+                .params .param .stars > svg.selected {
+                    fill: #fdbe2b;
+                }
 
 .questPlate .buttons {
     display: flex;
 }
 
-.questPlate .buttons a {
-    display: block;
-    border-radius: 7px;
-    border: 1px solid #fdbe2b;
-    background-color: black;
-    text-decoration: none;
-    color: #fdbe2b;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: .3s cubic-bezier(0, .4, 0, 1);
-}
+    .questPlate .buttons a {
+        display: block;
+        border-radius: 7px;
+        border: 1px solid #fdbe2b;
+        background-color: black;
+        text-decoration: none;
+        color: #fdbe2b;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: .3s cubic-bezier(0, .4, 0, 1);
+    }
 
-.questPlate .buttons a:hover {
-    color: black;
-    background-color: #fdbe2b;
-}
+        .questPlate .buttons a:hover {
+            color: black;
+            background-color: #fdbe2b;
+        }
 
 
 
@@ -154,46 +149,45 @@ header>#logo {
     flex: 1 1 auto;
 }
 
-.container .header {
-    width: 90%;
-    margin: 30px auto;
+    .container .header {
+        width: 90%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
+        .container .header .bgImage {
+            width: 100%;
+            background-position: center;
+            background-size: 90%;
+        }
 
-.container .header .bgImage {
-    width: 100%;
-    background-position: center;
-    background-size: 90%;
-}
+        .container .header > div {
+            margin-top: 40px;
+        }
 
-.container .header>div {
-    margin-top: 40px;
-}
+        .container .header .title {
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+        }
 
-.container .header .title {
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
+        .container .header .questHeader {
+            margin-top: 70px;
+        }
 
-.container .header .questHeader {
-    margin-top: 70px;
-}
+    .container .descriptionBox {
+        background-color: rgba(255, 255, 255, .3);
+        backdrop-filter: blur(10px);
+        padding: 50px;
+        height: 100%;
+        flex: 1 1 auto;
+    }
 
-.container .descriptionBox {
-    background-color: rgba(255, 255, 255, .3);
-    backdrop-filter: blur(10px);
-    padding: 50px;
-    height: 100%;
-    flex: 1 1 auto;
-}
-
-.container .descriptionBox h2 {
-    margin-bottom: 20px;
-}
+        .container .descriptionBox h2 {
+            margin-bottom: 20px;
+        }
 
 input {
     border-radius: 5px;
@@ -206,83 +200,79 @@ form {
     margin: 70px auto;
 }
 
-form .field {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    justify-content: center;
-    align-items: center;
-}
+    form .field {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        justify-content: center;
+        align-items: center;
+    }
 
-form label {
-    font-size: 17px;
-    font-weight: bold;
-}
+    form label {
+        font-size: 17px;
+        font-weight: bold;
+    }
 
-form input,
-textarea {
-    outline: none;
-    height: 25px;
-    width: 97%;
-    margin-top: 10px;
-    padding: 5px;
+    form input,
+    textarea {
+        outline: none;
+        height: 25px;
+        width: 97%;
+        margin-top: 10px;
+        padding: 5px;
+        border-radius: 7px;
+        border: 2px solid whitesmoke;
+        box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.5) inset;
+        font-family: Bahnschrift;
+        font-size: 18px;
+    }
 
-    border-radius: 7px;
-    border: 2px solid whitesmoke;
-    box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.5) inset;
-    font-family: Bahnschrift;
-    font-size: 18px;
-}
+        form input:focus,
+        textarea:focus {
+            border: 2px solid #fdbe2b;
+            transition: .3s cubic-bezier(.5, 0, 0, 1);
+        }
 
-form input:focus,
-textarea:focus {
-    border: 2px solid #fdbe2b;
-    transition: .3s cubic-bezier(.5, 0, 0, 1);
-}
+    form textarea {
+        height: 150px;
+    }
 
-form textarea {
-    height: 150px;
-}
+    form input[type="submit"] {
+        height: 35px;
+        width: 100%;
+        background-color: whitesmoke;
+        box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
+        transition: .3s cubic-bezier(0, .4, 0, 1);
+        border: 0;
+    }
 
-form input[type="submit"] {
-    height: 35px;
-    width: 100%;
-    background-color: whitesmoke;
-    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
-    transition: .3s cubic-bezier(0, .4, 0, 1);
-    border: 0;
-}
-
-form input[type="submit"]:hover {
-    background-color: #fdbe2b;
-    color: white;
-}
+        form input[type="submit"]:hover {
+            background-color: #fdbe2b;
+            color: white;
+        }
 
 a.submitBut {
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 35px;
     width: 100%;
     background-color: whitesmoke;
     margin-top: 30px;
     margin-bottom: 10px;
-
     box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.3);
     transition: .3s cubic-bezier(0, .4, 0, 1);
     border: 0;
     border-radius: 7px;
-
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-a.submitBut:hover {
-    background-color: #fdbe2b;
-    color: white;
-}
+    a.submitBut:hover {
+        background-color: #fdbe2b;
+        color: white;
+    }
 
 
 
@@ -290,6 +280,7 @@ a.submitBut:hover {
     width: 100%;
     position: relative;
     margin-top: 10px;
+    text-align: center;
 }
 
 .input__file {
@@ -298,10 +289,24 @@ a.submitBut:hover {
     position: absolute;
 }
 
+.input__file-icon-wrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
 .input__file-button-text {
     line-height: 1;
     margin-top: 1px;
-    text-align: center;
 }
 
 .input__file-button {
@@ -317,14 +322,15 @@ a.submitBut:hover {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     border-radius: 7px;
     cursor: pointer;
-    transition: .3s cubic-bezier(0, .4, 0, 1);
+    margin: 0 auto;
 }
+
 .input__file-button:hover {
     background: #fdbe2b;
-    color: black;
+    color: white;
 }

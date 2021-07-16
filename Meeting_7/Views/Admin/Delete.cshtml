@@ -1,0 +1,14 @@
+﻿@model Meeting_7.Models.Quest
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="container">
+    @using (Html.BeginForm("Delete", "Admin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <h3>Вы уверены что хотите удалить квест:</h3>
+        <h2>@Model.Title</h2>
+        <input type="submit" value="Подтвердить" />
+    }
+</div>

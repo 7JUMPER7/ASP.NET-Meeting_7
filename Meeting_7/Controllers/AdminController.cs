@@ -44,6 +44,61 @@ namespace Meeting_7.Controllers
             return View(quest);
         }
 
+        [HttpGet]
+        public ActionResult Delete(int? id)
+        {
+            if (id.HasValue)
+            {
+                Quest buf = repository.GetItem(id.Value);
+                if (buf != null)
+                {
+                    return View(buf);
+                }
+            }
+            return HttpNotFound();
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            if (repository.Delete(id))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int? id)
+        {
+            if (id.HasValue)
+            {
+                Quest buf = repository.GetItem(id.Value);
+                if (buf != null)
+                {
+                    TempData["bufImagePath"] = buf.ImagePath;
+                    return View(buf);
+                }
+            }
+            return HttpNotFound();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Quest quest)
+        {
+            if (ModelState.IsValid)
+            {
+                if (quest.ImagePath == null)
+                {
+                    quest.ImagePath = TempData["bufImagePath"].ToString();
+                    TempData.Clear();
+                }
+                repository.Update(quest);
+                return RedirectToAction("Index", "Home");
+            }
+            return View(quest);
+        }
+
         private string SaveImage(HttpPostedFileBase image)
         {
             string relativePath = Path.Combine("Files", image.FileName);
