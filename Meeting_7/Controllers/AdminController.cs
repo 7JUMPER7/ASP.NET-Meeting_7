@@ -20,7 +20,7 @@ namespace Meeting_7.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            return View();
+            return View(repository.GetAll());
         }
 
         [HttpGet]
@@ -39,7 +39,7 @@ namespace Meeting_7.Controllers
                     quest.ImagePath = SaveImage(image);
                 }
                 repository.Create(quest);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
             return View(quest);
         }
@@ -63,7 +63,7 @@ namespace Meeting_7.Controllers
         {
             if (repository.Delete(id))
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
             return View();
         }
@@ -84,17 +84,21 @@ namespace Meeting_7.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Quest quest)
+        public ActionResult Edit(Quest quest, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
             {
-                if (quest.ImagePath == null)
+                if (image != null)
+                {
+                    quest.ImagePath = SaveImage(image);
+                }
+                else
                 {
                     quest.ImagePath = TempData["bufImagePath"].ToString();
                     TempData.Clear();
                 }
                 repository.Update(quest);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
             return View(quest);
         }

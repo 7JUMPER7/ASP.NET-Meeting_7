@@ -8,7 +8,7 @@
 .bgImage {
     z-index: -1;
     width: 400px;
-    height: 400px;
+    height: 100%;
     right: 0;
     filter: blur(2px);
     box-shadow: 0 0 25px 20px rgba(0, 0, 0, 1) inset;
@@ -55,6 +55,27 @@ header {
     align-items: center;
     justify-content: center;
     margin: 20px 15%;
+}
+
+main a {
+    display: block;
+    border-radius: 7px;
+    border: 1px solid #fdbe2b;
+    background-color: black;
+    text-decoration: none;
+    text-align: center;
+    color: #fdbe2b;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: .3s cubic-bezier(0, .4, 0, 1);
+}
+main a:hover {
+    color: black;
+    background-color: #fdbe2b;
+}
+main a.delBut:hover {
+    background-color: rgb(255, 22, 22);
+    border-color: rgb(255, 22, 22);
 }
 
 .questPlate {
@@ -122,25 +143,9 @@ header {
 .questPlate .buttons {
     display: flex;
 }
-
     .questPlate .buttons a {
-        display: block;
-        border-radius: 7px;
-        border: 1px solid #fdbe2b;
-        background-color: black;
-        text-decoration: none;
-        color: #fdbe2b;
-        font-weight: bold;
-        padding: 10px 20px;
-        transition: .3s cubic-bezier(0, .4, 0, 1);
+        margin-right: 10px;
     }
-
-        .questPlate .buttons a:hover {
-            color: black;
-            background-color: #fdbe2b;
-        }
-
-
 
 .container {
     min-height: inherit;
@@ -267,6 +272,7 @@ a.submitBut {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    z-index: 3;
 }
 
     a.submitBut:hover {
@@ -334,3 +340,6 @@ a.submitBut {
     background: #fdbe2b;
     color: white;
 }
+
+
+

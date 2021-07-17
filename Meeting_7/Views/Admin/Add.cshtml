@@ -1,5 +1,4 @@
-﻿@using Meeting_7.Models
-@model Quest
+﻿@model Meeting_7.Models.Quest
 @{
     ViewBag.Title = "Add";
     Html.EnableClientValidation(false);
@@ -18,7 +17,7 @@
     <div class="field">
         <label for="ImagePath">Путь к картинке</label>
         <div class="input__wrapper">
-            <input type="file" name="image" id="input__file" class="input input__file" multiple>
+            <input type="file" name="image" id="input__file" class="input input__file">
             <label for="input__file" class="input__file-button">
                 <span class="input__file-icon-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill" viewBox="0 0 16 16">
